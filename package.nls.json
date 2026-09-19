@@ -1,6 +1,4 @@
 {
-  "extension.displayName": "Super Kill Time",
-  "extension.description": "Play quick time killers in VS Code.",
   "command.startBrickBreaker.title": "SuperKillTime: Start Brick Breaker",
   "command.startInvaders.title": "SuperKillTime: Start Invaders"
 }

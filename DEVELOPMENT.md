@@ -65,9 +65,13 @@ pnpm run watch
 | `pnpm run compile` | 1 回だけビルド |
 | `pnpm run watch` | 変更を監視して再ビルド |
 | `pnpm run typecheck` | 型チェックのみ（`tsc --noEmit`） |
-| `pnpm run package` | 本番ビルド（minify） |
+| `pnpm run build` | 本番ビルド（minify、`vscode:prepublish` から自動実行される） |
+| `pnpm run vsce:package` | `vsce` で `.vsix` をパッケージング |
+| `pnpm run vsce:publish` | `vsce` で Marketplace に公開 |
 
 Webview のデバッグはコマンドパレットの `Developer: Open Webview Developer Tools` から行えます。
+
+`vsce package` / `vsce publish` はどちらも実行前に `vscode:prepublish`（= `build`）を自動で呼ぶため、事前に手動でビルドし直す必要はありません。
 
 ## 構成
 
