@@ -1,0 +1,38 @@
+{
+  "name": "super-kill-time",
+  "displayName": "Super Kill Time",
+  "description": "エディタタブでブロック崩しを遊べる拡張機能",
+  "version": "0.0.1",
+  "publisher": "easy-easy",
+  "private": true,
+  "license": "MIT",
+  "engines": {
+    "vscode": "^1.90.0"
+  },
+  "categories": [
+    "Other"
+  ],
+  "main": "./dist/extension.js",
+  "activationEvents": [],
+  "contributes": {
+    "commands": [
+      {
+        "command": "super-kill-time.startBreakout",
+        "title": "SuperKillTime: ブロック崩しを開始"
+      }
+    ]
+  },
+  "scripts": {
+    "vscode:prepublish": "npm run package",
+    "compile": "node esbuild.js",
+    "watch": "node esbuild.js --watch",
+    "package": "node esbuild.js --production",
+    "typecheck": "tsc --noEmit"
+  },
+  "devDependencies": {
+    "@types/node": "^22.10.0",
+    "@types/vscode": "^1.90.0",
+    "esbuild": "^0.24.0",
+    "typescript": "^5.7.0"
+  }
+}
