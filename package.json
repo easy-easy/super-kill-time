@@ -1,7 +1,7 @@
 {
   "name": "super-kill-time",
-  "displayName": "Super Kill Time",
-  "description": "Play quick time killers in VS Code.",
+  "displayName": "%extension.displayName%",
+  "description": "%extension.description%",
   "version": "0.0.1",
   "publisher": "easy-easy",
   "private": true,
@@ -18,11 +18,11 @@
     "commands": [
       {
         "command": "super-kill-time.startBrickBreaker",
-        "title": "SuperKillTime: ブロック崩しを開始"
+        "title": "%command.startBrickBreaker.title%"
       },
       {
         "command": "super-kill-time.startInvaders",
-        "title": "SuperKillTime: インベーダーを開始"
+        "title": "%command.startInvaders.title%"
       }
     ]
   },

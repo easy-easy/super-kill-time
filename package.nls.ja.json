@@ -1,0 +1,6 @@
+{
+  "extension.displayName": "Super Kill Time",
+  "extension.description": "VS Code で気軽に時間を潰せるミニゲームを遊ぶ拡張です。",
+  "command.startBrickBreaker.title": "SuperKillTime: ブロック崩しを開始",
+  "command.startInvaders.title": "SuperKillTime: インベーダーを開始"
+}
