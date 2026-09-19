@@ -28,7 +28,7 @@ VS Code でこのフォルダを開いて **F5** を押します（`.vscode/laun
 1. `Cmd+Shift+P`（Windows/Linux は `Ctrl+Shift+P`）でコマンドパレットを開く
 2. **`Super Kill Time: ブロック崩しを開始`** を実行
 
-エディタタブとして "Breakout" が開きます。
+エディタタブとして "BrickBreaker" が開きます。
 
 ### 4. 操作
 

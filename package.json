@@ -1,7 +1,7 @@
 {
   "name": "super-kill-time",
   "displayName": "Super Kill Time",
-  "description": "エディタタブでブロック崩しを遊べる拡張機能",
+  "description": "Play quick time killers in VS Code.",
   "version": "0.0.1",
   "publisher": "easy-easy",
   "private": true,
@@ -17,7 +17,7 @@
   "contributes": {
     "commands": [
       {
-        "command": "super-kill-time.startBreakout",
+        "command": "super-kill-time.startBrickBreaker",
         "title": "SuperKillTime: ブロック崩しを開始"
       }
     ]

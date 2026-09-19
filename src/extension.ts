@@ -1,12 +1,12 @@
 import * as vscode from 'vscode';
 
-const VIEW_TYPE = 'arcadeBreakout';
+const VIEW_TYPE = 'arcadeBrickBreaker';
 
 /** 同時に開くパネルは 1 枚だけにする */
 let currentPanel: vscode.WebviewPanel | undefined;
 
 export function activate(context: vscode.ExtensionContext) {
-  const disposable = vscode.commands.registerCommand('super-kill-time.startBreakout', () => {
+  const disposable = vscode.commands.registerCommand('super-kill-time.startBrickBreaker', () => {
     const column = vscode.window.activeTextEditor?.viewColumn ?? vscode.ViewColumn.One;
 
     if (currentPanel) {
@@ -14,7 +14,7 @@ export function activate(context: vscode.ExtensionContext) {
       return;
     }
 
-    const panel = vscode.window.createWebviewPanel(VIEW_TYPE, 'Breakout', column, {
+    const panel = vscode.window.createWebviewPanel(VIEW_TYPE, 'BrickBreaker', column, {
       enableScripts: true,
       // タブを切り替えてもゲームの状態を保つ
       retainContextWhenHidden: true,
@@ -53,7 +53,7 @@ function getWebviewContent(webview: vscode.Webview, extensionUri: vscode.Uri): s
   <meta http-equiv="Content-Security-Policy" content="default-src 'none'; style-src ${webview.cspSource}; script-src 'nonce-${nonce}';">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link href="${styleUri}" rel="stylesheet">
-  <title>Breakout</title>
+  <title>BrickBreaker</title>
 </head>
 <body>
   <div class="wrap">
