@@ -9,7 +9,7 @@ VS Code のエディタタブでブロック崩しを遊べる拡張機能です
 リポジトリのルートで:
 
 ```bash
-npm install && npm run compile
+pnpm install && pnpm run compile
 ```
 
 `dist/extension.js` が生成されれば OK です。
@@ -46,7 +46,7 @@ VS Code でこのフォルダを開いて **F5** を押します（`.vscode/laun
 ## 開発
 
 ```bash
-npm run watch
+pnpm run watch
 ```
 
 ファイルを保存するたびに再ビルドされます。`src/extension.ts` を変更したら Extension Development Host のウィンドウで `Cmd+R`（Developer: Reload Window）を実行してください。
@@ -56,10 +56,10 @@ npm run watch
 
 | コマンド | 内容 |
 | --- | --- |
-| `npm run compile` | 1 回だけビルド |
-| `npm run watch` | 変更を監視して再ビルド |
-| `npm run typecheck` | 型チェックのみ（`tsc --noEmit`） |
-| `npm run package` | 本番ビルド（minify） |
+| `pnpm run compile` | 1 回だけビルド |
+| `pnpm run watch` | 変更を監視して再ビルド |
+| `pnpm run typecheck` | 型チェックのみ（`tsc --noEmit`） |
+| `pnpm run package` | 本番ビルド（minify） |
 
 Webview のデバッグはコマンドパレットの `Developer: Open Webview Developer Tools` から行えます。
 
