@@ -19,6 +19,10 @@
       {
         "command": "super-kill-time.startBrickBreaker",
         "title": "SuperKillTime: ブロック崩しを開始"
+      },
+      {
+        "command": "super-kill-time.startInvaders",
+        "title": "SuperKillTime: インベーダーを開始"
       }
     ]
   },

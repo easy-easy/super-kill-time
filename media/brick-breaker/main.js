@@ -38,17 +38,6 @@
 
   const pressed = new Set();
 
-  // --- 色（テーマ変数から拾う） -----------------------------------------
-  function themeColors() {
-    const s = getComputedStyle(document.body);
-    const fg = s.getPropertyValue('--vscode-editor-foreground').trim() || '#cccccc';
-    const accent =
-      s.getPropertyValue('--vscode-textLink-foreground').trim() ||
-      s.getPropertyValue('--vscode-focusBorder').trim() ||
-      '#4daafc';
-    return { fg, accent };
-  }
-
   // --- 初期化 -----------------------------------------------------------
   function buildBricks() {
     const list = [];
@@ -212,7 +201,7 @@
 
   // --- 描画 -------------------------------------------------------------
   function draw() {
-    const { fg, accent } = themeColors();
+    const { fg, accent } = SKT.themeColors();
 
     ctx.clearRect(0, 0, W, H);
 
@@ -252,18 +241,6 @@
   }
 
   // --- ループ -----------------------------------------------------------
-  let last = performance.now();
-
-  function frame(now) {
-    // タブ非表示から戻ったときに巨大な dt でボールが飛ばないよう上限を設ける
-    const dt = Math.min((now - last) / 1000, 1 / 30);
-    last = now;
-
-    update(dt);
-    draw();
-    requestAnimationFrame(frame);
-  }
-
   newGame();
-  requestAnimationFrame(frame);
+  SKT.runLoop({ update, draw });
 })();
